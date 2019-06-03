@@ -2,44 +2,37 @@
 
 using namespace std;
 
-float CalculatorFunction(float a, float b, float funnet, char funktion, float resultat) {
+// Fahrenheit = C * 1.8 + 32
+
+float FunctionCalculator(float celcius, float fahrenheit) {
 	
-	cout << "Välj en funktion" << endl;
-	cin >> a >> funktion >> b;
+	fahrenheit = celcius * 1.8 + 32;
 	
-	for(int i = 0; funnet != true; i++)
-	{
-		if(funktion == '+')
-		{
-			resultat = a + b;
-			funnet = true;
-		} else if(funktion == '-') {
-			resultat = a - b;
-			funnet = true;
-		} else if(funktion == '*') {
-			resultat = a * b;
-			funnet = true;
-		} else if(funktion == '/') {
-			resultat = a / b;
-			funnet = true;
-		} else if(i == 50) {
-			cout << "Kalkylationen var för lång eller felskriven" << endl;
-			funnet = true;
-		}
-	}
-		
-	return resultat;
+	return fahrenheit;
 }
 
 
 
+
+void FunctionTemp() {
+	float celcius, fahrenheit;
+	
+	cout << "Vad är temperaturen i celsius ";
+	cin >> celcius;
+	
+	
+	cout << "Fahrenheit: " << FunctionCalculator(celcius, fahrenheit);
+}
+
+
+
+
+
+
+
+
+
 int main(int argc, char** argv) {
-	char function;
-	float a = 0, b = 0, found, result;
-	
-	result = CalculatorFunction(a, b, found, function, result);
-	
-	cout << result;
-	
+	FunctionTemp();
 	return 0;
 }

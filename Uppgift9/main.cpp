@@ -1,29 +1,34 @@
 #include <iostream>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 using namespace std;
-int main(int argc, char** argv) {
+
+int main() {
 	int tal1, tal2, tal3;
 	
-	cout << "skriv tal 1" << endl;
+	cout << "Tal 1 ";
 	cin >> tal1;
-	cout << "skriv tal 2" << endl;
+	cout << "Tal 2 ";
 	cin >> tal2;
-	cout << "Skriv tal 3" << endl;
+	cout << "Tal 3 ";
 	cin >> tal3;
 	
-	if (tal1 > tal2 && tal3) {
-	cout << tal1;
-	}
-	
-	else if (tal2 > tal1 && tal3) {
-		cout << tal2;
-	}
-	
-	else (tal3 < tal1 && tal2) ;{
+	if(tal1 >= tal2)
+	{
+		if(tal1 >= tal3)
+		{
+			cout << tal1;
+			return 0;
+		}
 		cout << tal3;
+		return 0;
 	}
 	
+	if(tal2 >= tal3)
+	{
+		cout << tal2;
+		return 0;
+	}
+	cout << tal3;
 	
 	return 0;
 }
